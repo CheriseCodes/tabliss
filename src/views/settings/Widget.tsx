@@ -119,6 +119,35 @@ const Widget: FC<Props> = ({ plugin, onMoveDown, onMoveUp, onRemove }) => {
                   }
                 />
               </label>
+              <label>
+                Background Colour
+                <input
+                  type="color"
+                  value={plugin.display.backgroundColour}
+                  onChange={(event) =>
+                    boundSetDisplay({ backgroundColour: event.target.value })
+                  }
+              />
+              </label>
+              <label>Background Opacity
+                 <input type="range" 
+                 value={plugin.display.backgroundOpacity} 
+                 min="0" 
+                 max="100"
+                 onChange={(event) =>
+                  boundSetDisplay({ backgroundOpacity: Number(event.target.value) })
+                }/>
+                </label>
+              <label>Background Radius
+                 <input type="range" 
+                 value={plugin.display.backgroundRadius} 
+                 min="0" 
+                 max="100" 
+                 onChange={(event) =>
+                  boundSetDisplay({ backgroundRadius: Number(event.target.value) })
+                }
+                 />
+            </label>
             </>
           </ToggleSection>
         </div>

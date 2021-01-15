@@ -23,6 +23,9 @@ export type WidgetDisplay = {
   fontFamily?: string;
   fontSize?: number;
   fontWeight?: number;
+  backgroundColour?: string;
+  backgroundRadius?: number;
+  backgroundOpacity?: number;
   position: WidgetPosition;
 };
 

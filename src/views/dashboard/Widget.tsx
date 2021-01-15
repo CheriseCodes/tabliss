@@ -8,6 +8,9 @@ const Widget: FC<WidgetDisplay> = ({
   fontFamily,
   fontSize = 24,
   fontWeight,
+  backgroundOpacity,
+  backgroundColour,
+  backgroundRadius
 }) => (
   <div
     className={`Widget ${fontWeight ? 'weight-override' : ''}`}
@@ -16,6 +19,8 @@ const Widget: FC<WidgetDisplay> = ({
       fontFamily,
       fontSize: `${fontSize}px`,
       fontWeight,
+      borderRadius: `${backgroundRadius}px`,
+      backgroundColor: backgroundColour + ((undefined === backgroundOpacity) ? "" : backgroundOpacity.toString(16))
     }}
   >
     {children}
